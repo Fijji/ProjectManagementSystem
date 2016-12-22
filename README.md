@@ -1,6 +1,7 @@
 # ProjectManagementSystem
 
 Hibernate-console testing project.
+
 1. Initialize initDB.sql file on you local DB
 2. Run Main.java
 
