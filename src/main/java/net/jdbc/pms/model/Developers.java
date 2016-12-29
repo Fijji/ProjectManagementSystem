@@ -1,9 +1,20 @@
 package net.jdbc.pms.model;
 
+import javax.persistence.*;
+/**
+ * @author Kyryl Potapenko
+ */
+@Entity
+@Table(name = "developers")
 public class Developers implements Model {
-private int dev_id;
-private  String dev_name;
-private int dev_salary;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "dev_id")
+    private int dev_id;
+    @Column(name = "dev_name")
+    private String dev_name;
+    @Column(name = "dev_salary")
+    private int dev_salary;
 
     public Developers(int dev_id, String dev_name, int dev_salary) {
         this.dev_id = dev_id;
@@ -11,7 +22,7 @@ private int dev_salary;
         this.dev_salary = dev_salary;
     }
 
-    public Developers(){
+    public Developers() {
 
     }
 

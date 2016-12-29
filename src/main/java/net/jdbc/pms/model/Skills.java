@@ -1,15 +1,25 @@
 package net.jdbc.pms.model;
 
+import javax.persistence.*;
+/**
+ * @author Kyryl Potapenko
+ */
+@Entity
+@Table(name = "Skills")
 public class Skills implements Model {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "sk_id")
     private int sk_id;
+    @Column(name = "sk_name")
     private String sk_name;
 
     public Skills(int sk_id, String sk_name) {
         this.sk_id = sk_id;
         this.sk_name = sk_name;
     }
-    public Skills(){
+
+    public Skills() {
 
     }
 

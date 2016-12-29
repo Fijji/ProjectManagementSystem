@@ -21,8 +21,12 @@
             system
         </property>
 
-        <!-- List of XML mapping files -->
-        <mapping resource="Developer.hbm.xml"/>
+        <mapping class="net.jdbc.pms.model.Company"/>
+        <mapping class="net.jdbc.pms.model.Projects"/>
+        <mapping class="net.jdbc.pms.model.Skills"/>
+        <mapping class="net.jdbc.pms.model.Customers"/>
+        <mapping class="net.jdbc.pms.model.Developers"/>
+
     </session-factory>
 </hibernate-configuration>
 

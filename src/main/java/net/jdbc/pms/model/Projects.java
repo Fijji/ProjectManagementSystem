@@ -1,9 +1,21 @@
 package net.jdbc.pms.model;
 
+import javax.persistence.*;
+/**
+ * @author Kyryl Potapenko
+ */
+@Entity
+@Table(name = "Projects")
 public class Projects implements Model{
+   @Id
+   @GeneratedValue(strategy = GenerationType.IDENTITY)
+   @Column(name = "pj_id")
     private int pj_id;
+    @Column(name = "pj_name")
     private String pj_name;
+    @Column(name = "pj_desc")
     private String pj_desc;
+    @Column(name = "pj_cost")
     private int pj_cost;
 
     public Projects(int pj_id, String pj_name, String pj_desc, int pj_cost) {
